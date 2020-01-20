@@ -1,5 +1,3 @@
-import app from './app';
-
-const { server } = app;
+import server from './app';
 
 server.listen(3000);

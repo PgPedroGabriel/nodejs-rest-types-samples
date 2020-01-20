@@ -1,7 +1,10 @@
 import Sequelize from 'sequelize';
 import postgresconfig from '../configs/postgres';
+import Banner from '../models/Banner';
+import Product from '../models/Product';
+import Category from '../models/Category';
 
-const models = [];
+const models = [Banner, Product, Category];
 
 class Database {
   constructor() {
