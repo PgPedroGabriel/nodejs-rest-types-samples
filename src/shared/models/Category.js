@@ -13,6 +13,14 @@ class Category extends Sequelize.Model {
     );
     return this;
   }
+
+  static include() {
+    return {
+      model: this,
+      as: 'category',
+      attributes: ['id', 'name', 'slug'],
+    };
+  }
 }
 
 export default Category;

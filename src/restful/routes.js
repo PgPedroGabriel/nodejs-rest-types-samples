@@ -1,18 +1,13 @@
 import { Router } from 'express';
 import bannerController from './controllers/BannerController';
-import ObjectMiddleware from './middlewares/ObjectMiddleware';
+import bannerMiddleware from './middlewares/BannerMiddleware';
+import categoryMiddleware from './middlewares/CategoryMiddleware';
+import productMiddleware from './middlewares/ProductMiddleware';
 import categoryController from './controllers/CategoryController';
 import productController from './controllers/ProductController';
-
-import Banner from '../shared/models/Banner';
-import Product from '../shared/models/Product';
-import Category from '../shared/models/Category';
+import searchController from './controllers/SearchController';
 
 const routes = new Router();
-
-const bannerMiddleware = new ObjectMiddleware(Banner);
-const categoryMiddleware = new ObjectMiddleware(Category);
-const productMiddleware = new ObjectMiddleware(Product);
 
 routes.get('/restful/banner', bannerController.listAll);
 routes.post('/restful/banner', bannerController.create);
@@ -67,5 +62,7 @@ routes.delete(
   productMiddleware.find,
   productController.delete
 );
+
+routes.get('/restful/find', searchController.searchCategoryAndProducts);
 
 export default routes;

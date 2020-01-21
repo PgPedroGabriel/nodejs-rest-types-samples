@@ -1,5 +1,5 @@
-import Sequelize from 'sequelize';
 import Product from '../../shared/models/Product';
+import Category from '../../shared/models/Category';
 
 class ProductController {
   async create(req, res) {
@@ -16,7 +16,7 @@ class ProductController {
 
   async listAll(req, res) {
     const products = await Product.findAndCountAll({
-      order: Sequelize.literal('sequence ASC'),
+      include: [Category.include()],
     });
 
     return res.json(products);

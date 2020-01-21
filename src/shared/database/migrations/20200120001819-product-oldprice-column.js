@@ -1,7 +1,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     try {
-      await queryInterface.addColumn('products', 'oldPrice', {
+      await queryInterface.addColumn('products', 'old_price', {
         type: Sequelize.DOUBLE,
         allowNul: false,
       });
