@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import './database/index';
+import './shared/database/index';
 
 import bffRoutes from './bff/routes';
 import restfulRoutes from './restful/routes';

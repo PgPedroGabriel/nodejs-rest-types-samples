@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import Category from '../../models/Category';
+import Category from '../../shared/models/Category';
 
 class CategoryController {
   async create(req, res) {

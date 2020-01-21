@@ -1,6 +1,6 @@
-import Category from '../../models/Category';
-import Banner from '../../models/Banner';
-import Product from '../../models/Product';
+import Category from '../../shared/models/Category';
+import Banner from '../../shared/models/Banner';
+import Product from '../../shared/models/Product';
 
 class HomeController {
   async getHomeData(req, res) {

@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import Banner from '../../models/Banner';
+import Banner from '../../shared/models/Banner';
 
 class BannerController {
   async create(req, res) {

@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import Product from '../../models/Product';
+import Product from '../../shared/models/Product';
 
 class ProductController {
   async create(req, res) {
